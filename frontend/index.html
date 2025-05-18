@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Potato Leaf Disease Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🥔 Potato Leaf Disease Classifier</h1>
+
+    <div id="upload-area" onclick="document.getElementById('fileElem').click()">
+      <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)">
+      <p>📂 Click or drag & drop to upload a leaf image</p>
+    </div>
+
+    <img id="preview" src="#" alt="Image Preview" hidden />
+
+    <div id="result-box" hidden>
+      <h2>🧪 Prediction Result</h2>
+      <p><strong>Disease:</strong> <span id="class-name"></span></p>
+      <p><strong>Confidence:</strong> <span id="confidence"></span>%</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
